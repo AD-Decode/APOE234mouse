@@ -51,14 +51,14 @@ mastersheet_3.Animal_ID = (strrep(mastersheet_3.Animal_ID,'-','_'));
 
 %% Fill in missing info from first sheet
 
-Age_mastersheet = cell(12218,1);
-Sex_mastersheet = cell(12218,1);
-Genotype_mastersheet = cell(12218,1);
-Diet_mastersheet = cell(12218,1);
-%Age_months_mastersheet = nan(12218,1);
-Age_handling_mastersheet = cell(12218,1);
+Age_mastersheet = cell(height(full_sheet),1);
+Sex_mastersheet = cell(height(full_sheet),1);
+Genotype_mastersheet = cell(height(full_sheet),1);
+Diet_mastersheet = cell(height(full_sheet),1);
+%Age_months_mastersheet = nan(height(full_sheet),1);
+Age_handling_mastersheet = cell(height(full_sheet),1);
 
-%T = table('Size',[12218 3],'VariableTypes',{'string'});
+%T = table('Size',[height(full_sheet) 3],'VariableTypes',{'string'});
 
 merged_sheet = addvars(full_sheet,Age_mastersheet,Sex_mastersheet, ...
     Genotype_mastersheet,Diet_mastersheet, ...
